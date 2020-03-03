@@ -1,0 +1,35 @@
+Sang :
+http://arno.uvt.nl/show.cgi?fid=147794
+
+skitlearn has ordinal classfication
+multiclassification but with ordinal classes.  
+outliers cut-off values?
+
+if goal : 
+predict outcome of match? 
+ensemble methods
+
+
+
+
+
+
+
+
+if not supervised, do not utilize win rate % 
+or.... classification?
+
+
+
+
+
+
+
+
+Riley:
+clustering?
+PCA - feature extraction (KNOWING some piece classes can pair with each other...)
+ranking model - categorize based on 'placement' to create a multiclass model.
+maybe use quartile ranges?
+AUC & average precision?
+COULD use binary model but... 1-8 placements? 

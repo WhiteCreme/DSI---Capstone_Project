@@ -9,11 +9,13 @@ With the massive growth of e-sports and competitive online games, developers str
 
 ### Problem Statement
 
-Certain final team compositions and item builds may affect the outcome of a random match in a TFT.  Depending on what strategy an individual takes a player can gain an advantage over other players slightly.  Is there significant evidence that a certain team composition and item choice play a role in raising the win rate of a player? If so, what combinations & items best raise the win rate?
-
+Certain final team compositions and item builds may affect the outcome of a random match in a TFT.  Depending on what strategy an individual takes, a player can gain an advantage over other players slightly.  Using clustering models, we will explore if there is a significant evidence that certain team composition and item choices yield better placements.
 
 ### Modeling 
 
 #### Clustering
-
-place
+ #### k-means
+     - separate EDA on different clusters after modeling based on quartile placements (1-2, 3-4, 5-6, 7-8)
+ 
+ #### DBSCAN
+ 
