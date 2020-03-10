@@ -1,0 +1,26 @@
+k-means - clusters themselves need to represent 'placement' and maybe we can test for accuracy of our model in predicting placement... 
+dummy value that is a combination of my units 1010111001 so that I can cluster and segregate difference?
+use silhouette scores to compare clusters of 1-8 ?
+
+
+GOAL : i want to know which team composition yield best placement.
+decision tree , tree based
+exboost
+
+go with pca?
+- dimensional reduction using feature extraction would be good for 'unit' combinations
+
+
+total units = 10
+
+berserker_0 - combination of 3 units with units.class = berserker
+berserker_1 - combination of 6 units with units.class = berserker
+
+or I can look at individual values of the units and find new meaningful insights via cluster? (maybe some units are better together "not specified by combination bonus")
+but would still have to transform dummy columns as : 1100
+
+Additional to test but modeling..?
+what about particular unit + item? any stand out?
+
+
+clusters without the features to predict underlying values of the features (represented as cluster)

@@ -1,19 +1,4 @@
-# Capstone Project : Unraveling the Team Composition Influence in TFT 
-
-
-### Table of Contents:
-- [Problem Statement](#Problem-Statement)
-- [Game Description](#Game-Description)
-    
-- [Data Dictionary](#Data-Dictionary)
-
-## Problem Statement
-
-With the massive growth of e-sports and competitive online games, developers strive to come up with a revolutionary new genre that may shape the future of e-sports.  In 2019, a new type of online game, aka “auto-chess” has been on the rise and Riot Games has created a version of their own by the name of Team Fight Tactics with expectations of mobile releases in 2020.
-
-Certain final team compositions and item builds may affect the outcome of a random match in a TFT.  Depending on what strategy an individual takes, a player can gain an advantage over other players slightly.  Using clustering models, we will explore if there is a significant evidence that certain team composition and item choices yield better placements.
-
-## Game Description
+Game Description
 
 Teamfight Tactics is an alternative turn-based mode in a Multiplayer Online Battle Arena (MOBA) game, League of Legends by Riot Games.  Teamfight Tactics was created with the game foundation inspired by Dota Auto Chess (another alternative mode from a MOBA game) infused with champions from League of Legends.  A player is given a chance during his planning phase to purchase and/or place champions on a board with 8 rows and 7 columns of hexagons split horizontally for 2 players. 
 
@@ -26,63 +11,13 @@ Then comes the player vs. environment (PVE) phase where the player's units autom
 Once again, planning phase will occur and players can make changes to their board during this phase to prepare for the PVP phase.  Player vs. player (PVP) phase is a clash between two random players.  All players start out the match with 100 health points where every neutral or enemy player's unit that survives fighting the player's team does damage until the player reaches 0 points.  A player's health point is a universal scoring system that will carry over throughout all phases and a ranking of the players is determined based on the health point remaining throughout the match.  After some combination of PVP and PVE phases, the carousel phase returns and the cycle repeats until only a single player is alive.  
 
 
-### Champions & Set Effects
+Champions & Set Effects
 
 In Teamfight Tactics, all champions start as tier 1 but are automatically fused into tier 2 and 3 when the player obtains 3 copies of the identical units of the same tier.  Higher tier of units equate to higher base stats of the unit.  All units have 1 or 2 traits that are assigned to the units (static) which can give the entire team or the units with the same traits additional bonus effects that can benefit the team.  The bonus effect of the traits only activate when the specific units are placed on the board which is the reason for team compositions being so influential over a player's outcome of the match.  
 
-### Items 
+Items 
 
 Each champion is allowed up to 3 items to equip.  There are 9 items that can combine with another item to create a total variation of 45 different combined items.  Items automatically combine once they are equipped to a single unit.    
 
-## Executive Summary
-
-In order to perform any modeling or analysis, first thing we need to do is to obtain the appropriate data, then clean the data so that information can be interpreted through modeling techniques offered by the python library.  
 
 
-### Limitations 
-
--"un-robustness of API"
-- Game is not simple enough
-- Due to the depth of the game data available at the moment, further analysis based on player's data in between phases (turns) or analysis based on gold coin (income) trend are limited
-- RIOT API only gives data based on final holdings of champions
-- TFT is relatively new & RIOT API is still under development (they don't want ML to master 'botting')
-
-### Initial Discovery (EDA)
-
-- even though "shared pool" of champions but somehow majority of all players have similar team compositions 
-- There is a trend "meta" most players try to mimic or follow (increasing collinearity between features from original data)
-
-
-### Modeling 
-
-- Multiclass classification , ensemble
-- Decision Trees, Random Forest, XGBoost, AdaBoost
-
-#### Model Optimization
-
-- GridSearchCV to look for optimal parameters
-
-#### Model Evaluation
-- accuracy is not enough
-- precision, recall, f1, auc roc? (multiclass)
-
-## Conclusion
-
-## Recommendation
-
-## Data Dictionary
-
-|Feature|Type|Dataset|Description|
-|---|---|---|---|
-|gold_left|object|game_df|Total number of gold coins a player had remaining when eliminated from the game| 
-|last_round|float|game_df|Round number a player was on when eliminated from the game| 
-|level|float|game_df|The player's level when eliminated from the game| 
-|placement|float|game_df|Player's final placement (1st - 8th)|
-|players_eliminated|float|game_df|Total number of match opponents a player eliminated throughout the course of the game before finally being eliminated from the game|
-|time_eliminated|float|game_df|Total number of time elapsed (in seconds)|
-|total_damage_to_players|float|game_df|Total number of damage inflicted to match opponents.|
-|summonerName|object|game_df|Player's game ID|
-|division_tier|object|game_df|Player's division name and tier.|
-
-
- ## Sources
