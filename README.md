@@ -9,7 +9,7 @@
 - [Executive Summary](#Executive-Summary)
     - [Data Gathering](#Data-Gathering)
     - [Data Cleaning & Pre-Processing](#data-cleaning--pre-processing)
-    - [Initial Discovery (EDA)](#Initial-Discovery-(EDA))
+    - [Initial Discovery (EDA)](#initial-discovery-eda)
     - [Modeling](#Modeling)
     - [Model Evaluation](#Model-Evaluation)
  - [Conclusion](#Conclusion)
